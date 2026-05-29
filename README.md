@@ -1,67 +1,59 @@
-# ScottsTechX-tmux
+# 🖤 ScottsTechX tmux
 
-⚙️ DevOps Tool | Part of ScottsTechX Tool Suite
+<p align="center">
+  <img src="https://img.shields.io/badge/tmux-Terminal-Multiplexer-00ff88?style=for-the-badge&logo=linux&logoColor=black" alt="tmux"/>
+  <img src="https://img.shields.io/badge/Open-Source-00ff88?style=for-the-badge&logo=github&logoColor=black" alt="Open Source"/>
+</p>
 
----
-
-## About
-
-**Terminal multiplexer - split panes, persistent sessions**
-
-Official ScottsTechX tool repo — part of the [ScottsTechX Tool Installer](https://github.com/fredscottsbulls/ScottsTechX-Tool-Installer) suite.
-
-**Official Website:** https://github.com/tmux/tmux
+> **Terminal multiplexer — split panes, persistent sessions, and detachable terminals.**
 
 ---
 
-## Quick Install
+## ⚡ What It Does
 
-### Via ScottsTechX Tool Installer:
+tmux lets you split terminals into multiple panes, windows, and sessions — run multiple commands simultaneously, detach and reattach sessions, and share terminals with others.
+
+## 🚀 Quick Usage
 
 ```bash
-scotts-techx install tmux
+# Start new session
+tmux new -s pentest
+
+# Split horizontal
+Ctrl+b "
+
+# Split vertical
+Ctrl+b %
+
+# Navigate panes
+Ctrl+b arrow-keys
+
+# Detach session
+Ctrl+b d
+
+# Reattach session
+tmux attach -t pentest
+
+# List sessions
+tmux ls
 ```
 
-### Manual Install:
+## 🎯 CTF Workflow
 
 ```bash
-# Linux/macOS/Git Bash
-curl -fsSL https://raw.githubusercontent.com/fredscottsbulls/ScottsTechX-tmux/main/install.sh | bash
+# Create session with windows
+tmux new -s ctf
+# Window 1: recon
+# Window 2: exploitation
+# Window 3: notes
 
-# Windows PowerShell
-irm https://raw.githubusercontent.com/fredscottsbulls/ScottsTechX-tmux/main/install.ps1 | iex
+# Detach when done
+Ctrl+b d
+
+# Resume later
+tmux attach -t ctf
 ```
 
 ---
 
-## What is TMUX?
-
-Terminal multiplexer - split panes, persistent sessions.
-
-For full documentation: https://github.com/tmux/tmux
-
----
-
-## ScottsTechX Tool Suite (30 tools)
-
-| Category | Tools |
-|----------|-------|
-| Simple CLI | nmap, curl, wget, jq, git, python3, ffmpeg, traceroute, netcat, openssh |
-| Pentesting | hydra, sqlmap, nikto, hashcat, gobuster, searchsploit, masscan, burpsuite, ncat, Responder |
-| DevOps | docker, vim, htop, tmux, tar, make, openssl, ansible, kubectl, terraform |
-
-**[View Full Suite](https://github.com/fredscottsbulls/ScottsTechX-Tool-Installer)**
-
----
-
-## Disclaimer
-
-**For authorized use only.** Unauthorized access to computer systems is illegal.
-
----
-
-<div align="center">
-
-**ScottsTechX** | Fred Scotts | https://github.com/fredscottsbulls
-
-</div>
+MIT © 2026
